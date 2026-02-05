@@ -86,20 +86,20 @@ export function DataTable<T extends { id: string }>({
 
   return (
     <Card>
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
+      <CardHeader className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 space-y-0 pb-4">
         <CardTitle className="text-xl font-semibold">{title}</CardTitle>
-        <div className="flex items-center gap-3">
-          <div className="relative">
+        <div className="flex items-center gap-3 w-full md:w-auto">
+          <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder={searchPlaceholder}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-9 w-64"
+              className="pl-9 w-full sm:w-64"
             />
           </div>
           {onAdd && (
-            <Button onClick={onAdd} className="gap-2">
+            <Button onClick={onAdd} className="gap-2 w-auto sm:w-auto">
               <Plus size={16} />
               {addLabel}
             </Button>

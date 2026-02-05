@@ -52,7 +52,7 @@ export const QuickActions = () => {
   return (
     <div className="p-6 bg-[#0B111E]">
       <h2 className="section-title mb-4">Quick Actions</h2>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {actions.map((action) => (
           <button
             key={action.label}

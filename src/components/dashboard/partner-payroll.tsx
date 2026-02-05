@@ -175,7 +175,7 @@ export const PartnerPayroll = () => {
       </div>
 
       {/* Summary */}
-      <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-border">
         <div className="text-center">
           <p className="text-2xl font-bold text-foreground">$19,500</p>
           <p className="text-xs text-muted-foreground">Total Base Salary</p>

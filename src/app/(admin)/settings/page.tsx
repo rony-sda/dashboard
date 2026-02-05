@@ -61,7 +61,7 @@ const SystemSettings = () => {
       </div>
 
       <Tabs defaultValue="general" className="space-y-4">
-        <TabsList className="grid grid-cols-4 w-fit">
+        <TabsList className="grid grid-cols-2 sm:grid-cols-4 w-full">
           <TabsTrigger value="general" className="gap-2">
             <Palette size={16} />
             General

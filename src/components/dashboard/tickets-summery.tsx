@@ -95,7 +95,7 @@ export const TicketsSummary = () => {
       <h2 className="section-title mb-6">Support Tickets</h2>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         {ticketStats.map((stat) => (
           <div
             key={stat.label}

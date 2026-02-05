@@ -62,7 +62,7 @@ const Payroll = () => {
             Manage salary processing and payments
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="space-y-4 md:space-y-0">
           <Button variant="outline" className="gap-2">
             <Download size={16} />
             Export Report

@@ -35,7 +35,7 @@ interface SidebarProps {
   currentView: DashboardView;
 }
 
-interface NavItemType {
+export interface NavItemType {
   label: string;
   icon: React.ReactNode;
   path: string;
@@ -43,7 +43,7 @@ interface NavItemType {
   children?: NavItemType[];
 }
 
-const adminNavItems: NavItemType[] = [
+export const adminNavItems: NavItemType[] = [
   { label: "Dashboard", icon: <LayoutDashboard size={20} />, path: "/" },
   {
     label: "Content Management",
@@ -84,7 +84,7 @@ const adminNavItems: NavItemType[] = [
   { label: "Role Management", icon: <Shield size={20} />, path: "/roles" },
 ];
 
-const crmNavItems: NavItemType[] = [
+export const crmNavItems: NavItemType[] = [
   { label: "Dashboard", icon: <LayoutDashboard size={20} />, path: "/" },
   { label: "Clients", icon: <Users size={20} />, path: "/clients", badge: 24 },
   {
@@ -100,7 +100,7 @@ const crmNavItems: NavItemType[] = [
   { label: "Reports", icon: <BarChart3 size={20} />, path: "/reports" },
 ];
 
-const hrmNavItems: NavItemType[] = [
+export const hrmNavItems: NavItemType[] = [
   { label: "Dashboard", icon: <LayoutDashboard size={20} />, path: "/" },
   {
     label: "Organization",
@@ -127,7 +127,7 @@ const NavItemComponent = ({
   const hasChildren = item.children && item.children.length > 0;
 
   return (
-    <div className="bg-[#090E1A]">
+    <div>
       <div
         className={cn(
           "flex items-center gap-3 px-3 py-2.5 rounded-lg text-muted-foreground transition-all duration-200 hover:bg-sidebar-accent hover:text-foreground cursor-pointer",
@@ -187,7 +187,7 @@ export const Sidebar = ({ currentView }: SidebarProps) => {
   };
 
   return (
-    <aside className="w-64 h-screen bg-sidebar border-r border-sidebar-border flex flex-col">
+    <aside className="hidden bg-[#090E1A] md:flex md:fixed md:top-0 md:left-0 md:h-dvh md:w-64 bg-sidebar border-r border-sidebar-border flex-col overflow-y-auto">
       {/* Logo */}
       <div className="p-6 border-b border-sidebar-border">
         <div className="flex items-center gap-3">
